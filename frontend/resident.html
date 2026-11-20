@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Dashboard | Community Waste Management</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <h2>Community Waste</h2>
+        <p>Resident Portal</p>
+
+        <nav>
+            <a href="#" data-section="dashboardSection">Dashboard</a>
+            <a href="#" data-section="profileSection">My Profile</a>
+            <a href="#" data-section="requestSection">Request Collection</a>
+            <a href="#" data-section="requestsSection">My Requests</a>
+            <a href="#" data-section="scheduleSection">My Schedule</a>
+        </nav>
+
+        <button id="logoutBtn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+
+        <section id="dashboardSection">
+            <h1>Resident Dashboard</h1>
+            <p>Welcome to your Community Waste Management portal.</p>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>My Requests</h3>
+                    <p id="requestCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Pending Requests</h3>
+                    <p id="pendingCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Completed Collections</h3>
+                    <p id="completedCount">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profileSection" style="display:none;">
+            <h1>My Profile</h1>
+            <div id="profileDetails"></div>
+        </section>
+
+        <section id="requestSection" style="display:none;">
+            <h1>Request Waste Collection</h1>
+
+            <form id="requestForm">
+                <label>Waste Type</label>
+                <select id="wasteType" required>
+                    <option value="">Select waste type</option>
+                    <option value="Household">Household</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Recyclable">Recyclable</option>
+                    <option value="Hazardous">Hazardous</option>
+                </select>
+
+                <label>Quantity</label>
+                <input type="number" id="quantity" min="1" required>
+
+                <label>Pickup Address</label>
+                <input type="text" id="pickupAddress" required>
+
+                <label>Description</label>
+                <textarea id="description" required></textarea>
+
+                <button type="submit">Submit Request</button>
+                <p id="requestMessage"></p>
+            </form>
+        </section>
+
+        <section id="requestsSection" style="display:none;">
+            <h1>My Waste Requests</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Waste Type</th>
+                        <th>Quantity</th>
+                        <th>Pickup Address</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="requestsTable"></tbody>
+            </table>
+        </section>
+
+        <section id="scheduleSection" style="display:none;">
+            <h1>My Collection Schedule</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Schedule ID</th>
+                        <th>Collection Date</th>
+                        <th>Area</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="scheduleTable"></tbody>
+            </table>
+        </section>
+
+    </main>
+</div>
+
+<script src="resident.js"></script>
+</body>
+</html>
