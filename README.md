@@ -75,6 +75,6 @@ The database backup is provided in the `database-backup` folder.
 - `backend/` – Server, routes, controllers, models and database configuration.
 - `frontend/` – User interface files.
 - `database-backup/` – MongoDB database backup.
-- `START SYSTEM.bat` – Starts the application.
+- `START SYSTEM.bat` – Starts the application by double tap in file explorer.
 - `RESTORE DATABASE.bat` – Restores the database.
 - `package.json` – Project dependencies and scripts.

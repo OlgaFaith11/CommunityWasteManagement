@@ -1,8 +1,6 @@
 @echo off
 title Community Waste Management System
 
-// This file is going to help you launch my sytem automatically so you just have rifht click and reveal it in file explorer then double click it //
-
 cd /d "%~dp0"
 
 echo ==========================================
